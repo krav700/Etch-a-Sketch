@@ -7,6 +7,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
     height: 100%;
 }
 
@@ -22,4 +23,15 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+#gridButton {
+    height: 50px;
+    width: 200px;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 0px;
+    border-radius: 10px;
+    background-color: gray;
+    color: white;
 }
