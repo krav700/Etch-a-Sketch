@@ -14,13 +14,18 @@ for (let i = 0; i < 16; i++)
 }
 
 const allDivs = document.querySelectorAll(".gridDivs");
+let opacityLevel = 0.1;
 
 allDivs.forEach(divItem => {
     divItem.addEventListener("mouseenter", function colorBlocks() {
         const randomRed = Math.floor(Math.random() * 256) + 1;
         const randomGreen = Math.floor(Math.random() * 256) + 1;
         const randomBlue = Math.floor(Math.random() * 256) + 1;
-        divItem.style.backgroundColor = `rgb(${randomRed},${randomBlue},${randomGreen})`;
+        divItem.style.backgroundColor = `rgb(${randomRed},${randomBlue},${randomGreen},${opacityLevel})`;
+        if (opacityLevel < 1)
+        {
+            opacityLevel += 0.1;
+        }
         divItem.removeEventListener("mouseenter", colorBlocks);
     });
 });
@@ -29,7 +34,7 @@ const button = document.querySelector("#gridButton");
 
 button.addEventListener("click", () => {
     let gridLength = prompt("Please enter the grid lenght (1-100)");
-    
+    let opacityLevel = 0.1;
     if (gridLength > 0 && gridLength < 101)
     {
         containerOfDivs.remove();
@@ -58,7 +63,11 @@ button.addEventListener("click", () => {
                     const randomRed = Math.floor(Math.random() * 256) + 1;
                     const randomGreen = Math.floor(Math.random() * 256) + 1;
                     const randomBlue = Math.floor(Math.random() * 256) + 1;
-                    divItem.style.backgroundColor = `rgb(${randomRed},${randomBlue},${randomGreen})`;
+                    divItem.style.backgroundColor = `rgb(${randomRed},${randomBlue},${randomGreen},${opacityLevel})`;
+                    if (opacityLevel < 1)
+                    {
+                        opacityLevel += 0.1;
+                    }
                     divItem.removeEventListener("mouseenter", colorBlocks);
                 });
             });
