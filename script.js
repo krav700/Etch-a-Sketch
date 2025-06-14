@@ -18,9 +18,9 @@ let opacityLevel = 0.1;
 
 allDivs.forEach(divItem => {
     divItem.addEventListener("mouseenter", function colorBlocks() {
-        const randomRed = Math.floor(Math.random() * 256) + 1;
-        const randomGreen = Math.floor(Math.random() * 256) + 1;
-        const randomBlue = Math.floor(Math.random() * 256) + 1;
+        const randomRed = Math.floor(Math.random() * 256);
+        const randomGreen = Math.floor(Math.random() * 256);
+        const randomBlue = Math.floor(Math.random() * 256);
         divItem.style.backgroundColor = `rgb(${randomRed},${randomBlue},${randomGreen},${opacityLevel})`;
         if (opacityLevel < 1)
         {
@@ -60,9 +60,9 @@ button.addEventListener("click", () => {
             
             allDivs.forEach(divItem => {
                 divItem.addEventListener("mouseenter", function colorBlocks() {
-                    const randomRed = Math.floor(Math.random() * 256) + 1;
-                    const randomGreen = Math.floor(Math.random() * 256) + 1;
-                    const randomBlue = Math.floor(Math.random() * 256) + 1;
+                    const randomRed = Math.floor(Math.random() * 256);
+                    const randomGreen = Math.floor(Math.random() * 256);
+                    const randomBlue = Math.floor(Math.random() * 256);
                     divItem.style.backgroundColor = `rgb(${randomRed},${randomBlue},${randomGreen},${opacityLevel})`;
                     if (opacityLevel < 1)
                     {
